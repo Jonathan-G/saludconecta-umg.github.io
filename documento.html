@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documento final · SaludConecta</title>
+    <meta name="description" content="Documento final del proyecto SaludConecta (Word): para ver en línea o descargar.">
+    <link rel="icon" href="media/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        body.modo-impresion .cabecera, body.modo-impresion .titulo-pagina, body.modo-impresion .pie, body.modo-impresion .ficha-seccion,
+        body.modo-impresion .documento-barra, body.modo-impresion .salto { display: none !important; }
+        body.modo-impresion, body.modo-impresion .seccion { background: #fff; padding: 0; }
+        body.modo-impresion .contenedor { width: auto; margin: 0; }
+        body.modo-impresion .visor-doc { border: 0; border-radius: 0; background: #fff; }
+        body.modo-impresion .docx-contenedor { max-height: none; overflow: visible; padding: 0; background: #fff; }
+        body.modo-impresion .docx-contenedor .docx-wrapper { padding: 0 !important; background: #fff !important; }
+        body.modo-impresion .docx-contenedor .docx-wrapper > section.docx { box-shadow: none !important; margin: 0 !important; break-after: page; }
+        @page { size: Letter; margin: 0; }
+    </style>
+</head>
+<body data-pagina="documento">
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header id="cabecera" class="cabecera"></header>
+<main id="contenido">
+    <section class="titulo-pagina">
+        <div class="contenedor">
+            <p class="migas"><a href="index.html">Inicio</a> › Documento</p>
+            <h1>Documento final</h1>
+            <p>El documento Word completo del proyecto, para leer en línea o descargar.</p>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <div class="tarjeta ficha ficha-seccion aparece" style="margin-bottom:1.5rem">
+                <div class="dividida" style="align-items:start">
+                    <dl>
+                        <dt>Título</dt><dd>SaludConecta: plataforma web para la gestión de citas y expedientes clínicos básicos en clínicas comunitarias</dd>
+                        <dt>Curso</dt><dd>Microeconomía, Sección A: Proyecto final · Lic. Raúl Estuardo Bonilla Berganza</dd>
+                        <dt>Institución</dt><dd>Facultad de Ingeniería en Sistemas, Universidad Mariano Gálvez de Guatemala</dd>
+                        <dt>Formato</dt><dd>Word (.docx), más de 100 páginas, con índice automático y referencias en APA 7</dd>
+                    </dl>
+                    <div>
+                        <h2 class="h3" style="font-size:1.1rem">¿Qué contiene?</h2>
+                        <ul class="lista-marca">
+                            <li>Planteamiento del problema, justificación, objetivos y alcance.</li>
+                            <li>Investigación de mercados, estudio técnico, presupuesto y riesgos.</li>
+                            <li>Requerimientos, diseño de interfaces, arquitectura y modelo de datos.</li>
+                            <li>Módulos, plan de pruebas, manual de usuario y documentación técnica.</li>
+                            <li>Evaluación de resultados, lecciones aprendidas, conclusiones y anexos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documento-barra">
+                <div class="acciones" role="tablist" aria-label="Forma de ver el documento">
+                    <button class="boton boton-verde" type="button" id="verPdf" role="tab" aria-selected="true">Ver en PDF</button>
+                    <button class="boton boton-contorno" type="button" id="verWord" role="tab" aria-selected="false">Leer el Word aquí</button>
+                </div>
+                <div class="acciones">
+                    <a class="boton boton-primario" id="descargarWord" href="media/documento/Documento-Final-SaludConecta.docx" download>Descargar Word (.docx)</a>
+                    <a class="boton boton-contorno" id="abrirPdf" href="media/documento/Documento-Final-SaludConecta.pdf" target="_blank" rel="noopener">Abrir PDF en otra pestaña</a>
+                </div>
+            </div>
+
+            <div class="visor-doc" id="visor" aria-live="polite">
+                <p class="cargando">Cargando el documento…</p>
+            </div>
+            <p class="nota" id="notaVisor" style="margin-top:.8rem"></p>
+        </div>
+    </section>
+</main>
+<footer id="pie" class="pie"></footer>
+<script src="datos/config.js"></script>
+<script src="js/sitio.js"></script>
+<script src="lib/jszip.min.js"></script>
+<script src="lib/docx-preview.min.js"></script>
+<script src="js/documento.js"></script>
+</body>
+</html>

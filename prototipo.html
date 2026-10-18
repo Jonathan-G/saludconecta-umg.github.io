@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prototipo · SaludConecta</title>
+    <meta name="description" content="El prototipo funcional de SaludConecta desarrollado a partir del documento: capturas, flujos y pruebas.">
+    <link rel="icon" href="media/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="prototipo">
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header id="cabecera" class="cabecera"></header>
+<main id="contenido">
+    <section class="titulo-pagina">
+        <div class="contenedor">
+            <p class="migas"><a href="index.html">Inicio</a> › Prototipo</p>
+            <h1>El prototipo de SaludConecta</h1>
+            <p>Aplicación web funcional construida a partir del Documento Final: ASP.NET Core, SQL Server y arquitectura por capas.</p>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor dividida">
+            <div class="aparece">
+                <span class="etiqueta">Qué es</span>
+                <h2>Del documento al código</h2>
+                <p>El prototipo implementa los requerimientos, la matriz de permisos, el modelo de datos y las pantallas especificadas en el documento: <strong>cuatro roles</strong>, <strong>cinco módulos</strong> y las pantallas <strong>P-01 a P-11</strong>. Usa únicamente <strong>datos ficticios</strong> (5 médicos, 40 pacientes y 100 citas de demostración).</p>
+                <div class="acciones">
+                    <a class="boton boton-primario" data-prototipo href="https://saludconecta-umg.runasp.net" target="_blank" rel="noopener">Abrir el prototipo en ejecución</a>
+                </div>
+                <p class="nota" style="margin-top:.8rem">El prototipo está publicado en un servidor gratuito de pruebas, con datos ficticios; este sitio lo presenta y enlaza. La primera carga puede tardar unos segundos.</p>
+            </div>
+            <div class="tarjeta aparece">
+                <h3>Los cuatro flujos de punta a punta (objetivo OE-3)</h3>
+                <ol class="pasos" style="gap:.6rem">
+                    <li><strong>Registrar un paciente</strong> (Recepción), con validación y aviso de posibles duplicados.</li>
+                    <li><strong>Agendar una cita con disponibilidad</strong>: horarios libres por médico y fecha, sin reservar dos veces el mismo espacio.</li>
+                    <li><strong>Registrar una consulta en el expediente</strong> (Médico): la cita pasa a Atendida.</li>
+                    <li><strong>Generar un reporte</strong> (Administrador): citas por período y estado, pacientes atendidos y canal, solo con cantidades.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion seccion-alt" id="galeria">
+        <div class="contenedor">
+            <div class="seccion-encabezado aparece">
+                <span class="etiqueta">Pantallas</span>
+                <h2>Así se ve el prototipo</h2>
+                <p>Capturas reales con datos ficticios. Haga clic en una imagen para ampliarla.</p>
+            </div>
+            <div class="galeria">
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-login.png" data-alt="P-01 · Inicio de sesión"><img src="media/img/proto-login.png" alt="Pantalla de inicio de sesión con las cuentas de demostración" loading="lazy"></button><figcaption><b>P-01 · Inicio de sesión</b>Acceso por correo y contraseña; bloqueo temporal tras cinco intentos fallidos.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-agenda.png" data-alt="P-04 · Gestión de citas y agenda (Recepción)"><img src="media/img/proto-agenda.png" alt="Agenda de recepción con la lista de citas, estados y acciones por fila" loading="lazy"></button><figcaption><b>P-04 · Citas y agenda</b>Estados con color y texto; solo aparecen las acciones válidas para cada cita.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-solicitar.png" data-alt="P-03 · Solicitud de cita"><img src="media/img/proto-solicitar.png" alt="Solicitud de cita con paciente, médico, fecha y horarios disponibles" loading="lazy"></button><figcaption><b>P-03 · Solicitud de cita</b>Espacios libres por médico y fecha; el servidor vuelve a validar el horario.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-expediente.png" data-alt="P-06 · Expediente clínico básico (Médico)"><img src="media/img/proto-expediente.png" alt="Expediente clínico con alergias resaltadas, antecedentes, nueva consulta e historial" loading="lazy"></button><figcaption><b>P-06 · Expediente clínico</b>Alergias resaltadas, antecedentes editables solo por el médico e historial por fecha.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-panel.png" data-alt="P-09 · Panel administrativo y reportes"><img src="media/img/proto-panel.png" alt="Panel con indicadores, gráfico de citas por estado y reportes R-01, R-02 y R-03" loading="lazy"></button><figcaption><b>P-09 · Panel y reportes</b>Indicadores del período, gráfico de barras y exportación a CSV; sin datos clínicos.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-disponibilidad.png" data-alt="P-07 · Disponibilidad de médicos"><img src="media/img/proto-disponibilidad.png" alt="Bloques semanales de atención de un médico y formulario para agregar otro" loading="lazy"></button><figcaption><b>P-07 · Disponibilidad</b>Bloques semanales por médico; rechaza los que se traslapan.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-bitacora.png" data-alt="P-11 · Bitácora"><img src="media/img/proto-bitacora.png" alt="Bitácora con usuario, acción, entidad y detalle de cada evento" loading="lazy"></button><figcaption><b>P-11 · Bitácora</b>Quién creó, confirmó o canceló una cita y los intentos de acceso denegados.</figcaption></figure>
+                <figure class="captura aparece"><button type="button" data-grande="media/img/proto-movil.png" data-alt="Vista en teléfono: Mis citas"><img src="media/img/proto-movil.png" alt="Vista en teléfono de la pantalla Mis citas del paciente" loading="lazy" style="object-position:center"></button><figcaption><b>Vista en teléfono</b>La presentación se adapta a pantallas pequeñas (requerimiento RNF-07).</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <div class="seccion-encabezado aparece">
+                <span class="etiqueta">Calidad</span>
+                <h2>Qué se verificó</h2>
+                <p>El plan de pruebas del documento se ejecutó de forma automatizada contra el prototipo.</p>
+            </div>
+            <div class="rejilla r3">
+                <div class="tarjeta dato-grande aparece"><b>78</b><span>pruebas automáticas de las reglas de negocio (xUnit)</span></div>
+                <div class="tarjeta dato-grande aparece"><b>33</b><span>casos de extremo a extremo con un navegador real (flujos de OE-3 y casos PF)</span></div>
+                <div class="tarjeta dato-grande aparece"><b>0</b><span>defectos críticos abiertos al momento de la entrega</span></div>
+            </div>
+            <div class="rejilla r2" style="margin-top:1.25rem">
+                <div class="tarjeta aparece">
+                    <h3>Reglas comprobadas</h3>
+                    <ul class="lista-marca si">
+                        <li>Un espacio de un médico solo admite una cita activa (también en la base de datos).</li>
+                        <li>No se reservan fechas pasadas ni más allá de los días máximos de anticipación.</li>
+                        <li>El paciente solo cancela hasta 4 horas antes; después, solo recepción.</li>
+                        <li>Al reprogramar, la cita original queda Cancelada y se crea una nueva Confirmada.</li>
+                        <li>Recordatorios para las citas Confirmadas de las próximas 24 horas, sin duplicados.</li>
+                    </ul>
+                </div>
+                <div class="tarjeta aparece">
+                    <h3>Seguridad comprobada</h3>
+                    <ul class="lista-marca si">
+                        <li>Contraseñas con hash; bloqueo de 5 minutos tras 5 intentos fallidos.</li>
+                        <li>Recepción y Administrador no pueden abrir expedientes clínicos.</li>
+                        <li>Cambiar el identificador en la URL no da acceso a expedientes ajenos, y queda en la bitácora.</li>
+                        <li>El texto <code>' OR 1=1 --</code> en el buscador no devuelve datos ni falla.</li>
+                        <li>Reportes y CSV solo con cantidades, sin nombres ni diagnósticos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <div class="seccion-encabezado aparece">
+                <span class="etiqueta">Estructura</span>
+                <h2>Cómo está construido</h2>
+            </div>
+            <div class="tabla-caja aparece">
+                <table class="tabla">
+                    <caption>Proyectos de la solución SaludConecta.sln</caption>
+                    <thead><tr><th>Proyecto</th><th>Contenido principal</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>SaludConecta.Web</code></td><td>ASP.NET Core MVC con vistas Razor: controladores por módulo, pantallas P-01 a P-11, Identity y autorización por rol.</td></tr>
+                        <tr><td><code>SaludConecta.Negocio</code></td><td>Servicios con las reglas del negocio (citas, disponibilidad, expedientes, notificaciones, reportes, bitácora, usuarios).</td></tr>
+                        <tr><td><code>SaludConecta.Datos</code></td><td>Contexto de Entity Framework Core, migraciones y datos de prueba ficticios.</td></tr>
+                        <tr><td><code>SaludConecta.Entidades</code></td><td>Paciente, Médico, Cita, Expediente, Consulta, Notificación y demás clases compartidas.</td></tr>
+                        <tr><td><code>SaludConecta.Pruebas</code></td><td>Pruebas xUnit de las reglas de citas, disponibilidad, permisos, expedientes, reportes y usuarios.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="pie" class="pie"></footer>
+<script src="datos/config.js"></script>
+<script src="js/sitio.js"></script>
+<script>document.querySelectorAll("[data-prototipo]").forEach(function (a) { if (window.SITIO && SITIO.prototipoUrl) a.href = SITIO.prototipoUrl; });</script>
+</body>
+</html>

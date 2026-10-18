@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La solución · SaludConecta</title>
+    <meta name="description" content="Qué es SaludConecta, cómo funciona, sus módulos y roles, el alcance, la arquitectura por capas y la economía del servicio.">
+    <link rel="icon" href="media/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="solucion">
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header id="cabecera" class="cabecera"></header>
+<main id="contenido">
+    <section class="titulo-pagina">
+        <div class="contenedor">
+            <p class="migas"><a href="index.html">Inicio</a> › La solución</p>
+            <h1>La solución: SaludConecta</h1>
+            <p>Una plataforma web que reúne pacientes, citas y un expediente clínico electrónico básico en un solo sistema, sin reemplazar el criterio del personal médico.</p>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor dividida">
+            <div class="aparece">
+                <span class="etiqueta">Cómo funciona</span>
+                <h2>Del registro al reporte, en seis pasos</h2>
+                <p>El sistema se usa desde un navegador con usuario y contraseña. Al iniciar sesión, cada persona ve únicamente las opciones de su rol.</p>
+            </div>
+            <ol class="pasos aparece">
+                <li>La clínica registra a sus pacientes. Cada paciente cuenta con un expediente básico.</li>
+                <li>Cada médico tiene horarios de atención definidos; a partir de ellos el sistema muestra los espacios disponibles.</li>
+                <li>Un paciente, o recepción en su nombre, solicita una cita en un espacio disponible.</li>
+                <li>Recepción confirma la cita y el sistema genera un recordatorio interno.</li>
+                <li>El día de la cita, el médico consulta su agenda, atiende al paciente y registra la consulta en el expediente.</li>
+                <li>La dirección consulta reportes con cantidades generales de citas y pacientes atendidos.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="seccion seccion-alt">
+        <div class="contenedor">
+            <div class="seccion-encabezado aparece">
+                <span class="etiqueta">Módulos y roles</span>
+                <h2>Cinco módulos y cuatro roles</h2>
+            </div>
+            <div class="tabla-caja aparece" style="margin-bottom:2rem">
+                <table class="tabla">
+                    <caption>Módulos de SaludConecta y su función principal</caption>
+                    <thead><tr><th>Módulo</th><th>Función principal</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Acceso y seguridad</strong></td><td>Inicio de sesión, control de acceso por rol y bitácora de actividad.</td></tr>
+                        <tr><td><strong>Pacientes y expediente</strong></td><td>Registro de pacientes, expediente básico y registro de consultas.</td></tr>
+                        <tr><td><strong>Citas</strong></td><td>Solicitud, confirmación, cancelación y reprogramación de citas. Consulta de disponibilidad y agenda.</td></tr>
+                        <tr><td><strong>Notificaciones</strong></td><td>Recordatorios de citas y avisos internos.</td></tr>
+                        <tr><td><strong>Panel administrativo y reportes</strong></td><td>Gestión de usuarios, catálogos y parámetros. Reportes y estadísticas generales.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabla-caja aparece">
+                <table class="tabla">
+                    <caption>Roles de usuario y su función principal</caption>
+                    <thead><tr><th>Rol</th><th>Función principal</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Administrador</strong></td><td>Gestiona usuarios, catálogos y parámetros; define la disponibilidad de los médicos y consulta reportes y bitácora.</td></tr>
+                        <tr><td><strong>Recepción</strong></td><td>Registra y busca pacientes, y solicita, confirma, cancela y reprograma citas. No accede al contenido clínico.</td></tr>
+                        <tr><td><strong>Médico</strong></td><td>Consulta su agenda, atiende al paciente y registra la consulta en el expediente.</td></tr>
+                        <tr><td><strong>Paciente</strong></td><td>Consulta horarios disponibles, solicita y cancela sus citas y ve su expediente básico. Puede existir sin cuenta: en ese caso recepción gestiona sus citas.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <div class="seccion-encabezado aparece">
+                <span class="etiqueta">Alcance</span>
+                <h2>Qué incluye y qué queda fuera</h2>
+                <p>El alcance se limita a lo que un equipo de cinco estudiantes puede construir y documentar en el plazo disponible.</p>
+            </div>
+            <div class="rejilla r2">
+                <div class="tarjeta aparece">
+                    <h3>Incluido</h3>
+                    <ul class="lista-marca si">
+                        <li>Documento final con planificación, estudios de mercado, técnico, legal y de riesgos, y análisis de costos.</li>
+                        <li>Prototipo web con cuatro roles y cinco módulos.</li>
+                        <li>Notificaciones y recordatorios internos o simulados, y lista de contacto en recepción.</li>
+                        <li>Sitio web programado por el equipo y video de exposición grupal.</li>
+                        <li>Manual de usuario y documentación técnica.</li>
+                    </ul>
+                </div>
+                <div class="tarjeta aparece">
+                    <h3>Fuera del alcance</h3>
+                    <ul class="lista-marca no">
+                        <li>Implementación en una clínica real y uso de datos reales de pacientes.</li>
+                        <li>Aplicación móvil (evolución posterior; el prototipo solo adapta su presentación a teléfonos).</li>
+                        <li>Envío real de mensajes de texto o correos, e integración con instituciones públicas de salud.</li>
+                        <li>Facturación, farmacia, inventario, laboratorio y telemedicina.</li>
+                        <li>Contratación real del servidor, certificación de seguridad y puesta en producción.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion seccion-alt">
+        <div class="contenedor dividida">
+            <div class="aparece">
+                <span class="etiqueta">Estudio técnico</span>
+                <h2>Arquitectura por capas</h2>
+                <p>Una sola aplicación desplegada como unidad (monolito por capas): es el modelo más simple y sirve bien a aplicaciones internas y pequeñas. Cada capa solo se comunica con la inmediatamente inferior.</p>
+                <ul class="lista-marca">
+                    <li><strong>Presentación</strong> (SaludConecta.Web): controladores y vistas Razor; no contiene reglas del negocio.</li>
+                    <li><strong>Lógica de negocio</strong> (SaludConecta.Negocio): servicios con reglas y validaciones.</li>
+                    <li><strong>Acceso a datos</strong> (SaludConecta.Datos): Entity Framework Core sobre SQL Server.</li>
+                    <li><strong>Entidades</strong> (SaludConecta.Entidades): clases compartidas por todas las capas.</li>
+                </ul>
+                <p class="nota">Tecnologías: ASP.NET Core (.NET 10 LTS) con C#, SQL Server, vistas Razor con HTML, CSS y JavaScript, Git y GitHub.</p>
+            </div>
+            <div class="aparece">
+                <div class="capas" role="img" aria-label="Diagrama: el usuario habla con Presentación, que usa Lógica de negocio, que usa Acceso a datos, que consulta SQL Server. Las Entidades se comparten entre las tres capas.">
+                    <div class="capas-pila">
+                        <div class="capa capa-externa">Usuario (navegador web)</div>
+                        <div class="capa">Presentación<small>Controladores y vistas Razor</small></div>
+                        <div class="capa">Lógica de negocio<small>Servicios, reglas y validaciones</small></div>
+                        <div class="capa">Acceso a datos<small>Entity Framework Core</small></div>
+                        <div class="capa capa-externa">SQL Server<small>Base de datos relacional</small></div>
+                    </div>
+                    <div class="capa-entidades">Entidades<br><small style="font-weight:500">Clases compartidas</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <div class="seccion-encabezado aparece">
+                <span class="etiqueta">Economía del servicio</span>
+                <h2>¿Es viable? Precio y punto de equilibrio</h2>
+                <p>El servicio se plantea como suscripción mensual en quetzales, por debajo de los competidores locales (que cobran desde Q350 al mes por médico) y con un piloto sin costo de 60 días.</p>
+            </div>
+            <div class="rejilla r4" style="margin-bottom:1.5rem">
+                <div class="tarjeta dato-grande aparece"><b>Q600 / Q900</b><span>tarifa mensual: nivel Básico (hasta 3 médicos) y nivel Clínica (4 a 6)</span></div>
+                <div class="tarjeta dato-grande aparece"><b>Q6,265</b><span>costos fijos mensuales de operación</span></div>
+                <div class="tarjeta dato-grande aparece"><b>Q620</b><span>margen de contribución por clínica (Q720 de precio promedio − Q100 de costo variable)</span></div>
+                <div class="tarjeta dato-grande aparece"><b>11 clínicas</b><span>punto de equilibrio (10.1 redondeado hacia arriba); la meta es 15 en 12 meses</span></div>
+            </div>
+            <div class="tabla-caja aparece">
+                <table class="tabla">
+                    <caption>Resultados mensuales según el número de clínicas suscritas (Costo total = costos fijos + Q100 × clínicas)</caption>
+                    <thead><tr><th>Clínicas</th><th>Ingreso (Q)</th><th>Costo variable (Q)</th><th>Costo total (Q)</th><th>Utilidad (Q)</th><th>Costo medio por clínica (Q)</th></tr></thead>
+                    <tbody>
+                        <tr><td>5</td><td>3,600</td><td>500</td><td>6,765</td><td>−3,165</td><td>1,353</td></tr>
+                        <tr><td>11</td><td>7,920</td><td>1,100</td><td>7,365</td><td>555</td><td>670</td></tr>
+                        <tr><td>15</td><td>10,800</td><td>1,500</td><td>7,765</td><td>3,035</td><td>518</td></tr>
+                        <tr><td>25</td><td>18,000</td><td>2,500</td><td>8,765</td><td>9,235</td><td>351</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="nota" style="margin-top:.9rem">Economías de escala: al repartirse el costo fijo entre más clínicas, el costo medio baja de Q1,353 (5 clínicas) a Q351 (25 clínicas). Todas las cifras son estimaciones del escenario académico.</p>
+        </div>
+    </section>
+
+    <section class="seccion seccion-alt">
+        <div class="contenedor">
+            <p style="text-align:center;margin-top:2rem"><a class="boton boton-verde" href="prototipo.html">Ver el prototipo funcionando →</a></p>
+        </div>
+    </section>
+</main>
+<footer id="pie" class="pie"></footer>
+<script src="datos/config.js"></script>
+<script src="js/sitio.js"></script>
+</body>
+</html>

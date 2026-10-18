@@ -25,7 +25,7 @@ de la página (el navegador bloquea ese acceso a archivos locales); el botón «
 | `css/estilos.css`, `js/sitio.js`, `js/documento.js` | Estilos, carrusel, visor de imágenes, reproductor y visor del Word. |
 | `lib/` | `docx-preview` y `jszip` (visor del Word), incluidos para funcionar sin conexión. |
 | `media/documento/` | `Documento-Final-SaludConecta.docx`. |
-| `media/video/` | `exposicion-ejemplo.mp4` (video de ejemplo). |
+| `media/video/` | vacía: el video final está en YouTube (no listado), enlace en `datos/config.js`. |
 | `media/img/` | Portada del documento, capturas del prototipo y portada del video. |
 | `servir.js`, `Iniciar-Sitio.ps1` | Servidor local mínimo (con soporte para adelantar el video). |
 
@@ -33,7 +33,7 @@ de la página (el navegador bloquea ese acceso a archivos locales); el botón «
 
 **Publicar el video final.** Suba el video a YouTube como *no listado* y pegue el enlace en `video.youtube` de
 `datos/config.js` (o copie el MP4 a `media/video/` y ponga su nombre en `video.archivo`). Cambie `video.esEjemplo`
-a `false`. El video de ejemplo se puede borrar.
+a `false`. Si se cambia el video, reemplace el MP4 y conserve el nombre o actualice `archivo`.
 
 **Actualizar el documento.** Reemplace `media/documento/Documento-Final-SaludConecta.docx` por la versión nueva
 (mismo nombre). La portada de la diapositiva está en `media/img/doc-portada.png`; si cambia la carátula, reemplácela
